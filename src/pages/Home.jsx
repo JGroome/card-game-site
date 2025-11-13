@@ -4,7 +4,7 @@ import Slideshow from "../components/slideshow.jsx";
 
 export default function Home() {
   const heroImages = [
-    process.env.PUBLIC_URL + "images/newset1.jpg",
+    <img src={process.env.PUBLIC_URL + "images/newset1.jpg"} alt="New Set 1" />,
     "https://picsum.photos/seed/op2/1600/700",
     "https://picsum.photos/seed/op3/1600/700"
   ];
