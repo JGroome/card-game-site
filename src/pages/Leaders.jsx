@@ -86,7 +86,7 @@ export default function Leaders() {
       )}
       {status === "error" && (
         <p className="leaders-status error">
-          Couldn’t load leaders. {error ? `(${error})` : ""}
+          Couldn’t load leaders.
         </p>
       )}
 
