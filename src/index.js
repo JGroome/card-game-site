@@ -24,6 +24,7 @@ function App() {
           <Route path="leaders" element={<Leaders />} />
           <Route path="leader" element={<Leader />} />
           <Route path="contact-us" element={<ContactUs />} />
+          <Route path="add-leader" element={<AddLeader />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,3 +1,4 @@
+import { API_BASE } from "../config";
 import React, { useEffect, useMemo, useState } from "react";
 
 const API_BASE =
@@ -48,6 +49,10 @@ export default function Leaders() {
       return matchesText && matchesColor;
     });
   }, [leaders, query, color]);
+
+  <Link className="add-button" to="/add-leader">
+  + Add New Leader
+  </Link>
 
   return (
     <main className="leaders-page">
@@ -114,6 +119,7 @@ export default function Leaders() {
             <p className="leaders-status">No leaders match your filters.</p>
           )}
         </section>
+        
       )}
     </main>
   );

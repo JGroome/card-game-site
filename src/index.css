@@ -570,6 +570,82 @@ main {
   flex; gap: 10px;
 }
 
+.add-leader-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.add-leader-page h1 {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.leader-form {
+  background: #121820;
+  border: 1px solid #1f242d;
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+}
+
+.leader-form label {
+  display: grid;
+  gap: 6px;
+  color: #e7ecf6;
+}
+
+.leader-form input,
+.leader-form textarea {
+  background: #1a1f29;
+  border: 1px solid #1f242d;
+  border-radius: 12px;
+  padding: 10px;
+  color: #e7ecf6;
+  width: 100%;
+}
+
+.leader-form button {
+  background: var(--link-bg);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.leader-form button:hover {
+  background: var(--link-hover);
+}
+
+.status {
+  text-align: center;
+  font-weight: bold;
+}
+
+.status.success {
+  color: #7dffb1;
+}
+
+.status.error {
+  color: #ff8080;
+}
+
+.add-button {
+  display: inline-block;
+  background: var(--link-bg);
+  padding: 10px 16px;
+  border-radius: 12px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.add-button:hover {
+  background: var(--link-hover);
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {
