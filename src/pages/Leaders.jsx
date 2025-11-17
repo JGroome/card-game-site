@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
 import React, { useEffect, useMemo, useState } from "react";
-import { API_BASE } from "../config";
-
+import { Link } from "react-router-dom";
 
 const API_BASE =
   (import.meta && import.meta.env && import.meta.env.VITE_API_BASE) ||
   process.env.REACT_APP_API_BASE ||
-  "https://card-game-site-api.onrender.com/";
+  "https://card-game-site-api.onrender.com";
 
 export default function Leaders() {
   const [leaders, setLeaders] = useState([]);
@@ -17,6 +15,7 @@ export default function Leaders() {
 
   useEffect(() => {
     let cancelled = false;
+
     async function load() {
       try {
         setStatus("loading");
@@ -34,6 +33,7 @@ export default function Leaders() {
         }
       }
     }
+
     load();
     return () => {
       cancelled = true;
@@ -47,19 +47,23 @@ export default function Leaders() {
         !q ||
         l.name.toLowerCase().includes(q) ||
         (l.playstyle || "").toLowerCase().includes(q);
-      const matchesColor = color === "All" || (l.color || "").toLowerCase().includes(color.toLowerCase());
+
+      const matchesColor =
+        color === "All" ||
+        (l.color || "").toLowerCase().includes(color.toLowerCase());
+
       return matchesText && matchesColor;
     });
   }, [leaders, query, color]);
-
-  <Link className="add-button" to="/add-leader">
-  + Add New Leader
-  </Link>
 
   return (
     <main className="leaders-page">
       <header className="leaders-header">
         <h1>Leaders</h1>
+
+        <Link className="add-button" to="/add-leader">
+          + Add New Leader
+        </Link>
 
         <div className="leaders-controls">
           <input
@@ -91,6 +95,7 @@ export default function Leaders() {
       {status === "loading" && (
         <p className="leaders-status">Loading leaders…</p>
       )}
+
       {status === "error" && (
         <p className="leaders-status error">
           Couldn’t load leaders.
@@ -117,11 +122,11 @@ export default function Leaders() {
               </div>
             </article>
           ))}
+
           {filtered.length === 0 && (
             <p className="leaders-status">No leaders match your filters.</p>
           )}
         </section>
-        
       )}
     </main>
   );
