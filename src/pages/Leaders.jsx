@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useEffect, useMemo, useState } from "react";
+import { API_BASE } from "../config";
+
 
 const API_BASE =
   (import.meta && import.meta.env && import.meta.env.VITE_API_BASE) ||
@@ -18,7 +20,7 @@ export default function Leaders() {
     async function load() {
       try {
         setStatus("loading");
-        const res = await fetch(`${API_BASE}/api/leaders`, { cache: "no-store" });
+        const res = await fetch(`${API_BASE}/api/leaders`);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         if (!cancelled) {
