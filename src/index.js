@@ -10,8 +10,8 @@ import StarterDecks from "./pages/StarterDecks";
 import Leaders from "./pages/Leaders";
 import Leader from "./pages/Leader";
 import ContactUs from "./pages/ContactUs";
+import AddLeader from "./pages/AddLeader";
 import "./index.css";
-
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
