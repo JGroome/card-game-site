@@ -1,4 +1,3 @@
-import { API_BASE } from "../config";
 import React, { useEffect, useMemo, useState } from "react";
 
 const API_BASE =
