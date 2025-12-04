@@ -646,6 +646,95 @@ main {
   background: var(--link-hover);
 }
 
+.leader-edit-panel {
+  margin: 24px auto;
+  max-width: 900px;
+  background: #121820;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #1f242d;
+}
+
+.leader-edit-form {
+  display: grid;
+  gap: 12px;
+}
+
+.leader-edit-form label {
+  display: grid;
+  gap: 4px;
+}
+
+.leader-edit-form input,
+.leader-edit-form textarea {
+  background: #1a1f29;
+  border-radius: 10px;
+  border: 1px solid #1f242d;
+  padding: 8px 10px;
+  color: #e7ecf6;
+}
+
+.leader-edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn-primary {
+  background: #007bff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #3a4250;
+  padding: 8px 14px;
+  border-radius: 10px;
+  color: #e7ecf6;
+  cursor: pointer;
+}
+
+.leader-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.leader-btn.edit {
+  background: #007bff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.leader-btn.delete {
+  background: #ff4b4b;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.action-message {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.action-message.success {
+  color: #7dffb1;
+}
+
+.action-message.error {
+  color: #ff9a9a;
+}
 
 /* Responsive */
 @media (max-width: 900px) {
